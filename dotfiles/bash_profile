@@ -1,0 +1,4 @@
+alias dotdrop='/Users/brre3696/dotfiles/dotdrop.sh --cfg=/Users/brre3696/dotfiles/config.yaml'
+
+
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"

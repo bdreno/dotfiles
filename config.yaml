@@ -1,6 +1,19 @@
 config:
   backup: true
+  banner: true
   create: true
   dotpath: dotfiles
+  ignoreempty: false
+  keepdot: false
+  link_by_default: false
+  longkey: false
+  showdiff: false
+  workdir: ~/.config/dotdrop
 dotfiles:
+  f_bash_profile:
+    dst: ~/.bash_profile
+    src: bash_profile
 profiles:
+  cinc225-213-dhcp.colorado.edu:
+    dotfiles:
+    - f_bash_profile
