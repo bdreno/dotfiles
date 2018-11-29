@@ -1,1 +1,23 @@
 alias dotdrop='$HOME/dotfiles/dotdrop.sh --cfg=$HOME/dotfiles/config.yaml'
+
+
+
+##   -------------------------------
+##   1.  ENVIRONMENT CONFIGURATION
+##   -------------------------------
+##   Change Prompt
+##   ------------------------------------------------------------
+#
+BGREEN='\[\033[1;32m\]'
+GREEN='\[\033[0;32m\]'
+BRED='\[\033[1;31m\]'
+RED='\[\033[0;31m\]'
+BBLUE='\[\033[1;34m\]'
+BLUE='\[\033[0;34m\]'
+NORMAL='\[\033[00m\]'
+PS1="\e[m`scutil --get ComputerName`:\e[m ${BLUE}(${RED}\w${BLUE}) ${NORMAL}\n\$${RED}=${RED}>${NORMAL} "
+
+
+
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx

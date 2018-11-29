@@ -1,4 +1,7 @@
-alias dotdrop='/Users/brre3696/dotfiles/dotdrop.sh --cfg=/Users/brre3696/dotfiles/config.yaml'
+if [ -r ~/.profile ]; then . ~/.profile; fi
+case "$-" in *i*) if [ -r ~/.bashrc ]; then . ~/.bashrc; fi;; esac
 
 
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
+
+
