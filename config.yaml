@@ -13,7 +13,19 @@ dotfiles:
   f_bash_profile:
     dst: ~/.bash_profile
     src: bash_profile
+  f_bashrc:
+    dst: ~/.bashrc
+    src: bashrc
+  f_inputrc:
+    dst: ~/.inputrc
+    src: inputrc
+  f_profile:
+    dst: ~/.profile
+    src: profile
 profiles:
   cinc225-213-dhcp.colorado.edu:
     dotfiles:
     - f_bash_profile
+    - f_profile
+    - f_bashrc
+    - f_inputrc
