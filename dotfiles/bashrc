@@ -15,7 +15,7 @@ RED='\[\033[0;31m\]'
 BBLUE='\[\033[1;34m\]'
 BLUE='\[\033[0;34m\]'
 NORMAL='\[\033[00m\]'
-PS1="\e[m`scutil --get ComputerName`:\e[m ${BLUE}(${RED}\w${BLUE}) ${NORMAL}\n\$${RED}=${RED}>${NORMAL} "
+PS1="\e[m${RED}`scutil --get ComputerName`${GREEN} @\e[m ${BLUE}(${RED}\w${BLUE})${NORMAL}\n\$${NORMAL} "
 
 
 

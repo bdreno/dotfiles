@@ -7,21 +7,25 @@ config:
   keepdot: false
   link_by_default: true
   longkey: false
-  showdiff: false
+  showdiff: true
   workdir: ~/.config/dotdrop
 dotfiles:
   f_bash_profile:
     dst: ~/.bash_profile
     src: bash_profile
+    link: true
   f_bashrc:
     dst: ~/.bashrc
     src: bashrc
+    link: true
   f_inputrc:
     dst: ~/.inputrc
     src: inputrc
+    link: true
   f_profile:
     dst: ~/.profile
     src: profile
+    link: true
 profiles:
   cinc225-213-dhcp.colorado.edu:
     dotfiles:
