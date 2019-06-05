@@ -1,1 +1,1 @@
-PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin:$PATH:/Library/Frameworks/Python.framework/Versions/3.7/bin"

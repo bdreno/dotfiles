@@ -21,3 +21,8 @@ PS1="\n\e[m${BLUE}`whoami`${GREEN}@${RED}`scutil --get ComputerName`\n\e[m${BLUE
 
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+
+export ANSIBLE_HOSTS=/Users/brre3696/ansible_hosts
+
+export PATH=${PATH}:/Users/brre3696/Library/Python/2.7/bin
