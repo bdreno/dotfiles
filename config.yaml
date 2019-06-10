@@ -5,27 +5,35 @@ config:
   dotpath: dotfiles
   ignoreempty: false
   keepdot: false
-  link_by_default: true
+  link_dotfile_default: nolink
+  link_on_import: nolink
   longkey: false
   showdiff: true
   workdir: ~/.config/dotdrop
 dotfiles:
+  d_ssh:
+    dst: ~/.ssh
+    src: ssh
   f_bash_profile:
     dst: ~/.bash_profile
+    link: nolink
     src: bash_profile
-    link: true
   f_bashrc:
     dst: ~/.bashrc
+    link: nolink
     src: bashrc
-    link: true
   f_inputrc:
     dst: ~/.inputrc
+    link: nolink
     src: inputrc
-    link: true
   f_profile:
     dst: ~/.profile
+    link: nolink
     src: profile
-    link: true
+  f_zshrc:
+    dst: ~/.zshrc
+    link: nolink
+    src: zshrc
 profiles:
   cinc225-213-dhcp.colorado.edu:
     dotfiles:
@@ -33,3 +41,5 @@ profiles:
     - f_profile
     - f_bashrc
     - f_inputrc
+    - f_zshrc
+    - d_ssh
