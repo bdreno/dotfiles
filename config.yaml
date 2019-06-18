@@ -11,9 +11,6 @@ config:
   showdiff: true
   workdir: ~/.config/dotdrop
 dotfiles:
-  d_ssh:
-    dst: ~/.ssh
-    src: ssh
   f_bash_profile:
     dst: ~/.bash_profile
     link: nolink
@@ -34,6 +31,18 @@ dotfiles:
     dst: ~/.zshrc
     link: nolink
     src: zshrc
+  f_zprofile:
+    src: zprofile
+    dst: ~/.zprofile
+  f_zlogin:
+    src: zlogin
+    dst: ~/.zlogin
+  f_zlogout:
+    src: zlogout
+    dst: ~/.zlogout
+  f_zshenv:
+    src: zshenv
+    dst: ~/.zshenv
 profiles:
   cinc225-213-dhcp.colorado.edu:
     dotfiles:
@@ -42,4 +51,7 @@ profiles:
     - f_bashrc
     - f_inputrc
     - f_zshrc
-    - d_ssh
+    - f_zprofile
+    - f_zlogin
+    - f_zlogout
+    - f_zshenv
