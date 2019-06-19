@@ -55,3 +55,14 @@ profiles:
     - f_zlogin
     - f_zlogout
     - f_zshenv
+  docker-for-desktop.uisge.io:
+    dotfiles:
+    - f_bash_profile
+    - f_profile
+    - f_bashrc
+    - f_inputrc
+    - f_zshrc
+    - f_zprofile
+    - f_zlogin
+    - f_zlogout
+    - f_zshenv
