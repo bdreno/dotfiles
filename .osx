@@ -8,9 +8,7 @@
 
 ## Oh My ZSH
 export OHMYZSHDIR="${HOME}/.oh-my-zsh"
-[[ ! -d ${OHMYZSHDIR} ]] && ( ( ! (echo "Installing 'Oh My ZSH'...") ) && git clone https://github.com/ohmyzsh/ohmyzsh.git ${OHMYZSHDIR} )
-
-
+[[ ! -d ${OHMYZSHDIR} ]] && ( ( echo "Installing 'Oh My ZSH'..." ) ; git clone https://github.com/ohmyzsh/ohmyzsh.git ${OHMYZSHDIR} )
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
