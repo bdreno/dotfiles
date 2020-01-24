@@ -2,13 +2,28 @@
 
 
 
-###############################################################################
-# General UI/UX                                                               #
-###############################################################################
+################################################################################
+# Necessary stuff															   #
+################################################################################
 
 ## Oh My ZSH
 export OHMYZSHDIR="${HOME}/.oh-my-zsh"
 [[ ! -d ${OHMYZSHDIR} ]] && ( ( echo "Installing 'Oh My ZSH'..." ) ; git clone https://github.com/ohmyzsh/ohmyzsh.git ${OHMYZSHDIR} )
+
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+
+
+################################################################################
+# General UI/UX                                                                #
+################################################################################
+
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
