@@ -1,12 +1,20 @@
 #Runs for each new Terminal session
 
 # If you come from bash you might have to change your $PATH.
-# 
-export PATH=$HOME/bin:/usr/local/bin:${HOME}/Library/Python/2.7/bin:$PATH
 
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/opt/expat/bin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="${HOME}/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -72,16 +80,28 @@ ZSH_THEME="gnzh"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(aterminal  autojump autopep8 brew common-aliases dircycle dirhistory docker encode64 fabric fasd geeknote gpg-agent git gitfast git-extras git-flow git-hubflow git_remote_branch github history jsontools kubectl last-working-dir  osx per-directory-history perms pip pyenv pylint python repo tmux tmuxinator urltools vagrant tugboat virtualenvwrapper web-search wd)
 
-source $ZSH/oh-my-zsh.sh
+# Disabled plugins
+# aws node
+
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
+
+export PKG_CONFIG_PATH="/usr/local/opt/curl/lib/pkgconfig"
+export PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig"
+
+
+#export LDFLAGS="-L/usr/local/opt/curl/lib"
+#export CPPFLAGS="-I/usr/local/opt/curl/include"
+#export LDFLAGS="-L/usr/local/opt/libxml2/lib"
+#export CPPFLAGS="-I/usr/local/opt/libxml2/include"
+
+
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -101,13 +121,13 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-plugins=(aterminal aws autojump autopep8 brew common-aliases dircycle dirhistory docker encode64 fabric fasd geeknote gpg-agent git gitfast git-extras git-flow git-hubflow git_remote_branch github history jsontools kubectl last-working-dir node osx per-directory-history perms pip pyenv pylint python repo tmux tmuxinator urltools vagrant tugboat virtualenvwrapper web-search wd)
+alias dotdrop="${HOME}/dotfiles/dotdrop.sh --cfg=${HOME}/dotfiles/config.yaml"
+alias vpnc=/usr/local/etc/vpnc/vpnc-script
+alias ls=lsd
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 
-alias dotdrop="${HOME}/dotfiles/dotdrop.sh --cfg=${HOME}/dotfiles/config.yaml"
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
@@ -116,7 +136,16 @@ source /usr/local/share/zsh-navigation-tools/zsh-navigation-tools.plugin.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/usr/local/opt/expat/bin:$PATH"
 eval "$(/usr/libexec/path_helper)"
+
+
+#zsh completions have been installed to:
+#  /usr/local/opt/curl/share/zsh/site-functions
+#  /usr/local/share/zsh/site-functions
+#
+
+
+# keep this last
+# ~/.zshrc
+
+eval "$(starship init zsh)"
