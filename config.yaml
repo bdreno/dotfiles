@@ -50,7 +50,7 @@ profiles:
     - f_zlogin
     - f_profile
     - d_zprezto
-  Brads-Mac-mini:
+  Brads-Mac-mini.local:
     dotfiles:
     - f_zshrc
     - f_zshenv
