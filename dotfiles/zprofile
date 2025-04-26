@@ -1,0 +1,19 @@
+# Runs at login, including over SSH
+
+# .zprofile is basically the same as .zlogin except that it's sourced directly before
+# .zshrc is sourced instead of directly after it. According to the zsh documentation,
+# ".zprofile is meant as an alternative to .zlogin. The two are not intended to be used
+# together, although this could certainly be done if desired.".
+
+# It is advised to have command in .zprofile which may take some time to complete or
+# variables that are not updated frequently.
+
+
+
+
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+#case "$-" in *i*) if [ -r ~/.zshrc ]; then . ~/.zshrc; fi;; esac
+
+
+# Created by `pipx` on 2025-01-15 18:05:10
+export PATH="$PATH:/Users/brre3696/.local/bin"

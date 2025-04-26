@@ -1,0 +1,52 @@
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: "{{@@ env['DOTDROP_DOTPATH'] @@}}"
+  keepdot: false
+  link_on_import: relative
+  longkey: false
+dotfiles:
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
+    link: relative
+  f_zshenv:
+    src: zshenv
+    dst: ~/.zshenv
+    link: relative
+  f_zprofile:
+    src: zprofile
+    dst: ~/.zprofile
+    link: relative
+  f_zpath:
+    src: zpath
+    dst: ~/.zpath
+    link: relative
+  f_zlogout:
+    src: zlogout
+    dst: ~/.zlogout
+    link: relative
+  f_zlogin:
+    src: zlogin
+    dst: ~/.zlogin
+    link: relative
+  f_profile:
+    src: profile
+    dst: ~/.profile
+    link: relative
+  d_zprezto:
+    src: zprezto
+    dst: ~/.zprezto
+    link: relative
+profiles:
+  UCB-WLV714TLCM:
+    dotfiles:
+    - f_zshrc
+    - f_zshenv
+    - f_zprofile
+    - f_zpath
+    - f_zlogout
+    - f_zlogin
+    - f_profile
+    - d_zprezto

@@ -1,0 +1,5 @@
+# .zlogin is sourced at the start of a login shell. This file is sourced after .zshrc file
+# and it helps in maintaining commands to be run when the shell is fully setup.
+
+
+

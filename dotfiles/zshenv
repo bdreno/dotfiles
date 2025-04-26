@@ -1,0 +1,14 @@
+# This file is always sourced, so it should set environment variables that need to be 
+# updated frequently. It often contains exported variables that should be available to 
+# other programs, For example, $PATH, $EDITOR are often set in .zshenv. This file is read
+# when zsh is launched to run a single command as well.
+
+# The commands which run which runs once and which should be updated on each new shell 
+# must be declared in this file.
+
+if [[ $SHLVL == 1 && ! -o LOGIN ]]; then
+    source ~/.zpath
+fi
+
+
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
